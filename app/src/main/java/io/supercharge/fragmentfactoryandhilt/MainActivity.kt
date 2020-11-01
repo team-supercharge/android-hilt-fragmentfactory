@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import io.supercharge.fragmentfactoryandhilt.R.layout
+import dagger.hilt.android.EntryPointAccessors
+import io.supercharge.fragmentfactoryandhilt.app.ui.factory.DefaultFragmentFactoryEntryPoint
 import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
 import javax.inject.Inject
 
@@ -18,9 +19,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navHostFragment: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(layout.activity_main)
+        val entryPoint =
+            EntryPointAccessors.fromActivity(
+                this,
+                DefaultFragmentFactoryEntryPoint::class.java
+            )
 
+        supportFragmentManager.fragmentFactory = entryPoint.getFragmentFactory()
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        
         navHostFragment =
             requireNotNull(supportFragmentManager.findFragmentById(R.id.fragmentContainer))
 
