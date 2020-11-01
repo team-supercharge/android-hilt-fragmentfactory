@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/navDirectionFirstScreen">
+
+    <fragment
+        android:id="@+id/navDirectionFirstScreen"
+        android:name="io.supercharge.fragmentfactoryandhilt.app.ui.FirstScreenFragment">
+
+        <action
+            android:id="@id/navDirectionSecondScreen"
+            app:destination="@id/navDirectionSecondScreen" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navDirectionSecondScreen"
+        android:name="io.supercharge.fragmentfactoryandhilt.app.ui.SecondScreenFragment">
+
+        <action
+            android:id="@id/navDirectionThirdScreen"
+            app:destination="@id/navDirectionThirdScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navDirectionThirdScreen"
+        android:name="io.supercharge.fragmentfactoryandhilt.app.ui.ThirdScreenFragment" />
+</navigation>

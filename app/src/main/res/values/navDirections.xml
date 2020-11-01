@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="navDirectionFirstScreen" type="id" />
+    <item name="navDirectionSecondScreen" type="id" />
+    <item name="navDirectionThirdScreen" type="id" />
+</resources>

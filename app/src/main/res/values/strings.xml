@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FragmentFactory-and-Hilt</string>
+
+    <string name="first_screen_content">First screen</string>
+    <string name="second_screen_content">Second screen</string>
+    <string name="third_screen_content">Third screen</string>
+
+    <string name="previous_screen">Previous</string>
+    <string name="next_screen">Next</string>
+</resources>
