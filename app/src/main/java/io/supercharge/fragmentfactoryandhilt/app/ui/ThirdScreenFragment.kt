@@ -7,15 +7,13 @@ import io.supercharge.fragmentfactoryandhilt.R
 import io.supercharge.fragmentfactoryandhilt.base.BaseFragment
 import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
 import kotlinx.android.synthetic.main.fragment_third_screen.*
-import javax.inject.Inject
 
 @AndroidEntryPoint
-class ThirdScreenFragment : BaseFragment() {
+class ThirdScreenFragment constructor(
+    private val navigator: Navigator
+): BaseFragment() {
 
     override val layoutId: Int = R.layout.fragment_third_screen
-
-    @Inject
-    lateinit var navigator: Navigator
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

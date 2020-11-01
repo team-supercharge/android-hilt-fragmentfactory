@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
-import io.supercharge.fragmentfactoryandhilt.R.layout
 import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
 import javax.inject.Inject
 
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(layout.activity_main)
+        setContentView(R.layout.activity_main)
 
         navHostFragment =
             requireNotNull(supportFragmentManager.findFragmentById(R.id.fragmentContainer))

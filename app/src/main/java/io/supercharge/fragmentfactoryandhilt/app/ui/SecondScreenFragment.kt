@@ -10,17 +10,15 @@ import io.supercharge.fragmentfactoryandhilt.app.viewmodel.SecondScreenViewModel
 import io.supercharge.fragmentfactoryandhilt.base.BaseFragment
 import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
 import kotlinx.android.synthetic.main.fragment_second_screen.*
-import javax.inject.Inject
 
 @AndroidEntryPoint
-class SecondScreenFragment : BaseFragment() {
+class SecondScreenFragment constructor(
+    private val navigator: Navigator
+) : BaseFragment() {
 
     override val layoutId: Int = layout.fragment_second_screen
 
     private val viewModel: SecondScreenViewModel by viewModels()
-
-    @Inject
-    lateinit var navigator: Navigator
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
