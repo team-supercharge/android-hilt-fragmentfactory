@@ -7,9 +7,10 @@ import io.supercharge.fragmentfactoryandhilt.R
 import io.supercharge.fragmentfactoryandhilt.base.BaseFragment
 import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
 import kotlinx.android.synthetic.main.fragment_third_screen.*
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class ThirdScreenFragment constructor(
+class ThirdScreenFragment @Inject constructor(
     val navigator: Navigator
 ): BaseFragment() {
 

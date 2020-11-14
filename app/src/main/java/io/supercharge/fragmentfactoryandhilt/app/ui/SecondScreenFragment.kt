@@ -10,9 +10,10 @@ import io.supercharge.fragmentfactoryandhilt.app.viewmodel.SecondScreenViewModel
 import io.supercharge.fragmentfactoryandhilt.base.BaseFragment
 import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
 import kotlinx.android.synthetic.main.fragment_second_screen.*
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class SecondScreenFragment constructor(
+class SecondScreenFragment @Inject constructor(
     val navigator: Navigator
 ) : BaseFragment() {
 

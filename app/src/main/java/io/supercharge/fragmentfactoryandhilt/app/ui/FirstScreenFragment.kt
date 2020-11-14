@@ -9,9 +9,10 @@ import io.supercharge.fragmentfactoryandhilt.app.viewmodel.FirstScreenViewModel
 import io.supercharge.fragmentfactoryandhilt.base.BaseFragment
 import io.supercharge.fragmentfactoryandhilt.navigator.Navigator
 import kotlinx.android.synthetic.main.fragment_first_screen.*
+import javax.inject.Inject
 
 @AndroidEntryPoint
-class FirstScreenFragment constructor(
+class FirstScreenFragment @Inject constructor(
     val navigator: Navigator
 ) : BaseFragment() {
 
